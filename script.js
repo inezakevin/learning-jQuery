@@ -26,7 +26,15 @@ $(document).ready(function(){
                 .fadeIn(2000);
             });
             //button click event to hide and show section
-            $("Button").on("click", function(){
-                $("#container").toggle();
+            $("button").on({
+                click : function(){
+                    $("#container").toggle();
+                },
+                mouseenter : function(){
+                    $(this).css("background-color" , "grey")
+                },
+                mouseleave : function(){
+                    $(this).css("background-color" , "")
+                }
             });
 });
