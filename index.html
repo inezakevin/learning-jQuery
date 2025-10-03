@@ -3,39 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>jQuery</title>
+        <!-- load jquery library -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- load my own script -->
+        <script src="script.js"></script>
     </head>
     <body>
         <div id="myDiv" style="display: none;"></div>
         <p style="display: none;">Hello World</p>
-        <script>
-            //selecting div and change its content
-            $("#myDiv")
-            .html("<h1>Hello jQuery!</h1>")
-            .css({
-                color: "green",
-                "font-size": "18px",
-                "text-align": "center"
-            })
-            .fadeIn(1000);
-            //selecting paragraph and change its content
-            $("p")
-            .css({
-                "text-align" : "center"
-            })
-            .fadeIn(2000)
-            .delay(1000)
-            //used function to make first text of paragraph appear before changing it
-            .fadeOut(1000, function(){
-                $(this)
-                .text("I like jQuery")
-                .css({
-                    "background-color" : "grey",
-                    "font-size" : "15px"
-                })
-                .fadeIn(2000);
-            });
-            
-        </script>
     </body>
 </html>
