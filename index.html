@@ -20,13 +20,22 @@
             .fadeIn(1000);
             //selecting paragraph and change its content
             $("p")
-            .text("I like jQuery")
             .css({
-                "background-color" : "grey",
-                "font-size" : "15px",
                 "text-align" : "center"
             })
-            .fadeIn(2000);
+            .fadeIn(2000)
+            .delay(1000)
+            //used function to make first text of paragraph appear before changing it
+            .fadeOut(1000, function(){
+                $(this)
+                .text("I like jQuery")
+                .css({
+                    "background-color" : "grey",
+                    "font-size" : "15px"
+                })
+                .fadeIn(2000);
+            });
+            
         </script>
     </body>
 </html>
